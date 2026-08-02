@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "magnetism:block/magnet_block" },
+    "facing=east":  { "model": "magnetism:block/magnet_block", "y": 90 },
+    "facing=south": { "model": "magnetism:block/magnet_block", "y": 180 },
+    "facing=west":  { "model": "magnetism:block/magnet_block", "y": 270 },
+    "facing=down":  { "model": "magnetism:block/magnet_block", "x": 90 },
+    "facing=up":    { "model": "magnetism:block/magnet_block", "x": 270 }
+  }
+}
