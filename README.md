@@ -31,20 +31,20 @@
 Ванильный `FallingBlockEntity` хранит **целиком** `BlockState` (приватное поле
 `blockState`):
 
-- пишется в NBT — `addAdditionalSaveData` → `NbtUtils.writeBlockState(this.blockState)`;
-- уходит в spawn-пакет — `getAddEntityPacket` шлёт `Block.getId(getBlockState())`,
+- пишется в NBT - `addAdditionalSaveData` → `NbtUtils.writeBlockState(this.blockState)`;
+- уходит в spawn-пакет - `getAddEntityPacket` шлёт `Block.getId(getBlockState())`,
   а `recreateFromPacket` восстанавливает `Block.stateById(...)`;
-- ставится ровно тем же при приземлении — `this.level().setBlock(pos, this.blockState, 3)`.
+- ставится ровно тем же при приземлении - `this.level().setBlock(pos, this.blockState, 3)`.
 
 Значит `FACING` переживает падение сам по себе (проверено по декомпилированным
 исходникам `net.minecraft.world.entity.item.FallingBlockEntity` для NeoForge
-21.1.235) — трогать сущность не нужно. Остаётся добавить поведение в полёте, и для
+21.1.235) - трогать сущность не нужно. Остаётся добавить поведение в полёте, и для
 этого хватает событий NeoForge: `EntityJoinLevelEvent` / `EntityLeaveLevelEvent`
 (пакет `...event.entity`), `LevelTickEvent.Post` (`...event.tick`),
 `LevelEvent.Unload` (`...event.level`). Все имена и пакеты сверены с исходниками
 NeoForge в зависимостях.
 
-Итог: ни одного миксина. Это критично для сборки на сотни модов — нет риска
+Итог: ни одного миксина. Это критично для сборки на сотни модов - нет риска
 конфликта байткод-патчей и нет `Overwrite`, который ломает совместимость.
 
 ### Оптимизация (с цифрами)
