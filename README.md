@@ -1,10 +1,25 @@
 # Magnetism - магнитный блок (NeoForge 1.21.1)
 
-Реализация ТЗ: блок притягивает металл по тегу предметов, падает без опоры не теряя
-свойств, вращается и сохраняет поворот при падении, полюса притягиваются/отталкиваются
-в полёте.
+[![Build](https://github.com/MrBuggI/magnetism/actions/workflows/build.yml/badge.svg)](https://github.com/MrBuggI/magnetism/actions/workflows/build.yml)
+[![Release](https://img.shields.io/github/v/release/MrBuggI/magnetism)](https://github.com/MrBuggI/magnetism/releases/latest)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A)
+![Loader](https://img.shields.io/badge/loader-NeoForge-F08A2A)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
+Магнитный блок: притягивает металл по тегу предметов, падает без опоры не теряя
+свойств, вращается и сохраняет поворот при падении, полюса притягиваются и
+отталкиваются в полёте. Проект сделан по техническому заданию с упором на
+совместимость и производительность в больших сборках.
 
 **Миксинов: 0. Своих сетевых пакетов: 0. `Overwrite`: нет (нечего перезаписывать).**
+
+> **English:** a NeoForge 1.21.1 magnet block. It attracts items by an item tag, falls like sand while keeping its rotation, and magnets interact through a real dipole model (like poles repel, opposite poles attract) while falling. Zero mixins, zero custom network packets, cached entity lookups with backoff. The architecture and performance notes below are in Russian.
+
+## Установка
+
+1. Установите [NeoForge](https://neoforged.net/) 21.1.x для Minecraft 1.21.1.
+2. Скачайте `.jar` из раздела [Releases](https://github.com/MrBuggI/magnetism/releases/latest) и положите в папку `mods/`.
+3. Блок `magnet_block` находится во вкладке креатива.
 
 - mod id: `magnetism`
 - пакет: `ru.buggi.magnetism`
