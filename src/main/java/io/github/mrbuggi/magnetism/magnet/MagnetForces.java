@@ -27,7 +27,7 @@ public final class MagnetForces {
 
                 Vec3 d = pa.subtract(pb);
                 double len2 = Math.max(d.lengthSqr(), MagnetSettings.MIN_DIST_SQR);
-                double scalar = (qa * qb * MagnetSettings.MAGNET_FORCE) / (len2 * Math.sqrt(len2));
+                double scalar = (qa * qb * MagnetSettings.magnetForce()) / (len2 * Math.sqrt(len2));
                 total = total.add(d.scale(scalar));
             }
         }
@@ -72,7 +72,7 @@ public final class MagnetForces {
 
         Vec3 delta = target.subtract(itemPos);
         double dist2 = delta.lengthSqr();
-        if (dist2 > MagnetSettings.ITEM_RADIUS_SQR) {
+        if (dist2 > MagnetSettings.itemRadiusSqr()) {
             return false;
         }
         if (dist2 < 1.0E-4) {
@@ -80,7 +80,7 @@ public final class MagnetForces {
         }
 
         double soft = Math.max(dist2, MagnetSettings.MIN_DIST_SQR);
-        double scalar = MagnetSettings.ITEM_PULL / (soft * Math.sqrt(soft));
+        double scalar = MagnetSettings.itemPull() / (soft * Math.sqrt(soft));
         Vec3 impulse = clamp(delta.scale(scalar), MagnetSettings.ITEM_MAX_STEP);
 
         Vec3 motion = item.getDeltaMovement().add(impulse);

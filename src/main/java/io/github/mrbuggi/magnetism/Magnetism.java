@@ -5,8 +5,10 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import io.github.mrbuggi.magnetism.config.MagnetConfig;
 import io.github.mrbuggi.magnetism.event.MagnetEventHandler;
 import io.github.mrbuggi.magnetism.registry.ModBlockEntities;
 import io.github.mrbuggi.magnetism.registry.ModBlocks;
@@ -21,8 +23,12 @@ public final class Magnetism {
         ModBlocks.ITEMS.register(modBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modBus);
 
-        modBus.addListener(Magnetism::onBuildCreativeTabs);
+        // Серверный конфиг: хранится в папке мира и приходит клиенту с сервера.
+        container.registerConfig(ModConfig.Type.SERVER, MagnetConfig.SPEC);
+        modBus.addListener(MagnetConfig::onLoad);
+        modBus.addListener(MagnetConfig::onReload);
 
+        modBus.addListener(Magnetism::onBuildCreativeTabs);
 
         MagnetEventHandler.register(NeoForge.EVENT_BUS);
     }

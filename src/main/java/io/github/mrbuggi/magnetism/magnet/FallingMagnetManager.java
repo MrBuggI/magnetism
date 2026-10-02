@@ -90,7 +90,7 @@ public final class FallingMagnetManager {
             for (int j = i + 1; j < n; j++) {
                 Entry b = list.get(j);
                 Vec3 bc = centerOf(b.entity());
-                if (ac.distanceToSqr(bc) > MagnetSettings.MAGNET_RADIUS_SQR) {
+                if (ac.distanceToSqr(bc) > MagnetSettings.magnetRadiusSqr()) {
                     continue;
                 }
                 Vec3 force = MagnetForces.dipoleForce(ac, a.facing(), bc, b.facing());
@@ -116,7 +116,7 @@ public final class FallingMagnetManager {
                 continue;
             }
             Vec3 ec = centerOf(e.entity());
-            if (ec.distanceToSqr(center) > MagnetSettings.MAGNET_RADIUS_SQR) {
+            if (ec.distanceToSqr(center) > MagnetSettings.magnetRadiusSqr()) {
                 continue;
             }
             Vec3 force = MagnetForces.dipoleForce(ec, e.facing(), center, facing);

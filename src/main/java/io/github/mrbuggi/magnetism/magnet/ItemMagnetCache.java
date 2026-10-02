@@ -32,7 +32,7 @@ public final class ItemMagnetCache {
     }
 
     private void rescan(ServerLevel level, Vec3 center) {
-        double d = MagnetSettings.ITEM_RADIUS * 2.0;
+        double d = MagnetSettings.itemRadius() * 2.0;
         AABB box = AABB.ofSize(center, d, d, d);
 
         List<ItemEntity> found = level.getEntitiesOfClass(
@@ -43,17 +43,17 @@ public final class ItemMagnetCache {
 
         if (found.isEmpty()) {
             ids = EMPTY;
-            cooldown = MagnetSettings.IDLE_RESCAN_INTERVAL;
+            cooldown = MagnetSettings.idleRescanInterval();
             return;
         }
 
-        int count = Math.min(found.size(), MagnetSettings.MAX_TRACKED_ITEMS);
+        int count = Math.min(found.size(), MagnetSettings.maxTrackedItems());
         if (ids.length != count) {
             ids = new int[count];
         }
         for (int i = 0; i < count; i++) {
             ids[i] = found.get(i).getId();
         }
-        cooldown = MagnetSettings.RESCAN_INTERVAL;
+        cooldown = MagnetSettings.rescanInterval();
     }
 }
