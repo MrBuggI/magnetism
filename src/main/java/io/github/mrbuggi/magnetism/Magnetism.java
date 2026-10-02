@@ -1,4 +1,4 @@
-package ru.buggi.magnetism;
+package io.github.mrbuggi.magnetism;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -7,9 +7,9 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import ru.buggi.magnetism.event.MagnetEventHandler;
-import ru.buggi.magnetism.registry.ModBlockEntities;
-import ru.buggi.magnetism.registry.ModBlocks;
+import io.github.mrbuggi.magnetism.event.MagnetEventHandler;
+import io.github.mrbuggi.magnetism.registry.ModBlockEntities;
+import io.github.mrbuggi.magnetism.registry.ModBlocks;
 
 @Mod(Magnetism.MOD_ID)
 public final class Magnetism {

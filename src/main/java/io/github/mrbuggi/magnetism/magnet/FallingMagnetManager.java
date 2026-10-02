@@ -1,4 +1,4 @@
-package ru.buggi.magnetism.magnet;
+package io.github.mrbuggi.magnetism.magnet;
 
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceKey;
@@ -7,7 +7,7 @@ import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import ru.buggi.magnetism.block.MagnetBlock;
+import io.github.mrbuggi.magnetism.block.MagnetBlock;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package ru.buggi.magnetism.event;
+package io.github.mrbuggi.magnetism.event;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.item.FallingBlockEntity;
@@ -7,7 +7,7 @@ import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.EntityLeaveLevelEvent;
 import net.neoforged.neoforge.event.level.LevelEvent;
 import net.neoforged.neoforge.event.tick.LevelTickEvent;
-import ru.buggi.magnetism.magnet.FallingMagnetManager;
+import io.github.mrbuggi.magnetism.magnet.FallingMagnetManager;
 
 public final class MagnetEventHandler {
 

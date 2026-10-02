@@ -1,4 +1,4 @@
-package ru.buggi.magnetism.block;
+package io.github.mrbuggi.magnetism.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -7,11 +7,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import ru.buggi.magnetism.magnet.FallingMagnetManager;
-import ru.buggi.magnetism.magnet.ItemMagnetCache;
-import ru.buggi.magnetism.magnet.MagnetForces;
-import ru.buggi.magnetism.magnet.MagnetSettings;
-import ru.buggi.magnetism.registry.ModBlockEntities;
+import io.github.mrbuggi.magnetism.magnet.FallingMagnetManager;
+import io.github.mrbuggi.magnetism.magnet.ItemMagnetCache;
+import io.github.mrbuggi.magnetism.magnet.MagnetForces;
+import io.github.mrbuggi.magnetism.magnet.MagnetSettings;
+import io.github.mrbuggi.magnetism.registry.ModBlockEntities;
 
 public class MagnetBlockEntity extends BlockEntity {
 

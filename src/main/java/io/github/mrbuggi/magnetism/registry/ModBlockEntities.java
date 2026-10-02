@@ -1,11 +1,11 @@
-package ru.buggi.magnetism.registry;
+package io.github.mrbuggi.magnetism.registry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import ru.buggi.magnetism.Magnetism;
-import ru.buggi.magnetism.block.MagnetBlockEntity;
+import io.github.mrbuggi.magnetism.Magnetism;
+import io.github.mrbuggi.magnetism.block.MagnetBlockEntity;
 
 public final class ModBlockEntities {
 

@@ -1,9 +1,9 @@
-package ru.buggi.magnetism.registry;
+package io.github.mrbuggi.magnetism.registry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import ru.buggi.magnetism.Magnetism;
+import io.github.mrbuggi.magnetism.Magnetism;
 
 public final class ModTags {
 

@@ -22,7 +22,7 @@
 3. Блок `magnet_block` находится во вкладке креатива.
 
 - mod id: `magnetism`
-- пакет: `ru.buggi.magnetism`
+- пакет: `io.github.mrbuggi.magnetism`
 - блок: `magnet_block`
 - NeoForge: `21.1.235`, Minecraft `1.21.1`, Java 21
 - плагин сборки: `net.neoforged.gradle.userdev 7.1.38` (из MDK 1.21.1)

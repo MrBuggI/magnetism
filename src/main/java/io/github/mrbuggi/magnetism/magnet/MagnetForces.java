@@ -1,4 +1,4 @@
-package ru.buggi.magnetism.magnet;
+package io.github.mrbuggi.magnetism.magnet;
 
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

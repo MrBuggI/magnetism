@@ -1,10 +1,10 @@
-package ru.buggi.magnetism.magnet;
+package io.github.mrbuggi.magnetism.magnet;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import ru.buggi.magnetism.registry.ModTags;
+import io.github.mrbuggi.magnetism.registry.ModTags;
 
 import java.util.List;
 

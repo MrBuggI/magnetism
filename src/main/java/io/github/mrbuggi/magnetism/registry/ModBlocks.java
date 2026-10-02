@@ -1,4 +1,4 @@
-package ru.buggi.magnetism.registry;
+package io.github.mrbuggi.magnetism.registry;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.SoundType;
@@ -7,8 +7,8 @@ import net.minecraft.world.level.material.MapColor;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import ru.buggi.magnetism.Magnetism;
-import ru.buggi.magnetism.block.MagnetBlock;
+import io.github.mrbuggi.magnetism.Magnetism;
+import io.github.mrbuggi.magnetism.block.MagnetBlock;
 
 public final class ModBlocks {
 

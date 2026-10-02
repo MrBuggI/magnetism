@@ -1,4 +1,4 @@
-package ru.buggi.magnetism.magnet;
+package io.github.mrbuggi.magnetism.magnet;
 
 
 public final class MagnetSettings {

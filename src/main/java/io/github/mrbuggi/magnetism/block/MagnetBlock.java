@@ -1,4 +1,4 @@
-package ru.buggi.magnetism.block;
+package io.github.mrbuggi.magnetism.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.Nullable;
-import ru.buggi.magnetism.registry.ModBlockEntities;
+import io.github.mrbuggi.magnetism.registry.ModBlockEntities;
 
 public class MagnetBlock extends FallingBlock implements EntityBlock {
 
