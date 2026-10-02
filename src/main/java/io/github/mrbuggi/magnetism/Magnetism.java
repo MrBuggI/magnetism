@@ -9,6 +9,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import io.github.mrbuggi.magnetism.config.MagnetConfig;
+import io.github.mrbuggi.magnetism.datagen.ModDataGenerators;
 import io.github.mrbuggi.magnetism.event.MagnetEventHandler;
 import io.github.mrbuggi.magnetism.registry.ModBlockEntities;
 import io.github.mrbuggi.magnetism.registry.ModBlocks;
@@ -29,6 +30,7 @@ public final class Magnetism {
         modBus.addListener(MagnetConfig::onReload);
 
         modBus.addListener(Magnetism::onBuildCreativeTabs);
+        modBus.addListener(ModDataGenerators::gatherData);
 
         MagnetEventHandler.register(NeoForge.EVENT_BUS);
     }
